@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="{{url_for('static', filename='js/code.js')}}"></script>
     <title>Test</title>
 </head>
 <body>
-    <input type="text" id="Weight">
-    <input type="text" id="Height">
+    <input type="text" class="Weight">
+    <input type="text" class="Height">
+    <button onclick="calculate_IMC()">Submit</button>
 </body>
 </html>

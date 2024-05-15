@@ -14,8 +14,7 @@ def data():
         weight = float(result['Weight'])
         height = float(result['Height'])
         imc = weight / (height * height)
-        result['IMC'] = imc
-        return render_template('dati.html', result=result)
+        return render_template('dati.html', result=imc)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)

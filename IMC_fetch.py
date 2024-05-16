@@ -10,9 +10,8 @@ def data():
     if request.method == 'GET':
         return "The URL /data is accessed directly. Try going to '/form' to submit form"
     if request.method == 'POST':
-        result = request.get_json()
-        weight = result['Weight']
-        height = result['Height']
+        weight = float(result.json['weight'])
+        height = folat(result.json['height'])
         imc = weight / (height * height)
         return jsonify(imc)
 

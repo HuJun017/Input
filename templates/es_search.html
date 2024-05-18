@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Search Covid</title>
+    </head>
+    <body>
+        <form action="/es_search" method="GET">
+            <p>
+                Regione
+                <select name="regione">
+                    <option value=""></option>
+                    {% for regione in regioni %}
+                    <option value="{{ regione }}">{{ regione }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><input type = "submit" value = "Clicca per conoscere i dati" /></p>
+        </form>
+    </body>
+</html>

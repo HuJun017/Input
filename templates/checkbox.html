@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Covid data</title>
+    </head>
+    <body>
+        <form action="/info" method="GET">
+            <p>
+                Selezionare un ID
+                {% for n in tabella %}
+                    <p><input type="checkbox" name="{{ n }}" value="{{ n }}">{{ n }}</p>
+                {% endfor %}
+                <input type="submit" value="Info">
+            </p>
+        </form>        
+    </body>
+</html>

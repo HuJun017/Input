@@ -26,10 +26,15 @@ def search():
 
 @app.route('/info', methods = ['GET'])
 def info():
-    lista_indici = []
+    '''lista_indici = []
     for element in request.args:
         lista_indici.append(element[0])
-    risultato = dati_regioni.iloc[lista_indici]        
+    risultato = dati_regioni.iloc[lista_indici] '''
+
+    id = request.args.getlist('id')
+    id = [int(i) for i in id]
+    risultato = dati_regioni.iloc[id]
+
     if len(risultato) == 0:
         table = 'Regione non trovata'
     else:
